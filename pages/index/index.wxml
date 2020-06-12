@@ -1,0 +1,112 @@
+<page-meta
+  background-text-style="{{bgTextStyle}}"
+  background-color="{{bgColor}}"
+  background-color-top="{{bgColorTop}}"
+  background-color-bottom="{{bgColorBottom}}"
+  scroll-top="{{scrollTop}}"
+  scroll-duration="300"
+  page-style="color: green"
+  bindscroll="pageScroll"
+  bindscrolldone="pageScrollDone"
+>
+  <navigation-bar
+    title="{{nbTitle}}"
+    loading="{{nbLoading}}"
+    front-color="{{nbFrontColor}}"
+    background-color="{{nbBackgroundColor}}"
+    color-animation-duration="2000"
+    color-animation-timing-func="easeIn"
+  />
+</page-meta>
+
+<view class="menu" style="background:rgba(255,255,255,{{menuColor}})">用来测试实现滚动导航条变色</view>
+
+<navigator url="./new">
+  <button>跳另一个页面</button>
+</navigator>
+<button bindtap="scrollTo100">点击跳到 200rpx 处</button>
+<button class="page-nav" bindtap="pageNav">跳转到富文本测试页面</button>
+<view class="intro">
+  <text>
+    启动 5s 后会尝试改变页面样式
+    这个页面文字是绿色的，而且要长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+    长
+  </text>
+</view>

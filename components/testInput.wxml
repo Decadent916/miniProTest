@@ -1,0 +1,1 @@
+<input bindinput = "testInput" class = "test-input" placeholder = "手写输入法草稿模式检测"></input>

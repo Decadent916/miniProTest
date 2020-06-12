@@ -1,0 +1,12 @@
+<view class="page-con">
+  <scroll-view class="nav-list" scroll-x="{{true}}" scroll-into-view="{{navList[activeNavIndex].name}}" scroll-with-animation="true" scroll-anchoring="true">
+    <view id="{{item.name}}" class="nav-item {{activeNavIndex === index ? 'active' : ''}}" wx:for="{{navList}}" wx:key="index" bindtap="switchPage" data-navIndex="{{index}}">{{item.name}}</view>
+  </scroll-view>
+  <scroll-view class="list-con" scroll-x="{{canSwitch}}" scroll-into-view="{{navList[activeNavIndex].name}}" scroll-with-animation="true" scroll-anchoring="true">
+    <scroll-view id="{{item.name}}" class="list-item" wx:for="{{navList}}" wx:key="index" scroll-y="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" bindtouchcancel="touchCancel" refresher-enabled="{{systemFresh}}" refresher-triggered="{{item.isFresh}}" bindrefresherrefresh="beginFresh" bindscroll="listScroll" bindscrolltolower="bottomLoad" style="transform: translateY({{freshDistance}}px)">
+      <view class="top-fresh" hidden="{{!item.isFresh}}"></view>
+      <view class="card-item" wx:for="{{item.cardNum}}" wx:for-item="cardItem" wx:for-index="cardIndex" wx:key="cardIndex">{{item.name}}-{{cardIndex}}</view>
+      <view class="top-fresh" hidden="{{!item.showLoading}}"></view>
+    </scroll-view>
+  </scroll-view>
+</view>

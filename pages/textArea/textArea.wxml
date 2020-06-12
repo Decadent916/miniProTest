@@ -1,0 +1,7 @@
+
+<view class="text-con">
+<textarea placeholder="这是提示语"></textarea>
+</view>
+<view class="mask" hidden="{{!showMask}}" bindtap="toggleMask"></view>
+<view class="white-con" hidden="{{!showMask}}"></view>
+<button bindtap="toggleMask">切换弹窗测试穿透问题</button>
